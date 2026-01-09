@@ -271,6 +271,8 @@ def filter_data(df, rating = None, price = None):
 
 # Task 2 ?
 
+# hello
+
 def get_etas(activities, user_1_coordinates, user_2_coordinates):
 # FINISH FUNCTION
 
