@@ -272,40 +272,10 @@ def filter_data(df, rating = None, price = None):
 # Task 2 ?
 
 def get_etas(activities, user_1_coordinates, user_2_coordinates):
-    eta_dataset = []
-    for index, row in activities.iterrows():
-        name = row['Name']
-        activity_coordinates = ((row['Lat'], row['Lon']))
-        eta1 = calculate_eta(user_1_coordinates, activity_coordinates) # this is the part you'd want to optimize to avoid having to call this API for every row
-        eta2 = calculate_eta(user_2_coordinates, activity_coordinates) # currently at O(n)
-        
-        eta_dataset.append((name, eta1, eta2))
-    
-    return eta_dataset
+# FINISH FUNCTION
 
 def find_optimal_location(locations):
-    # Sort locations based on eta_to_location1 + eta_to_location2
-    sorted_locations = sorted(locations, key=lambda x: x[1] + x[2])
-
-    min_total_time = float('inf')
-    optimal_location = None
-
-    for loc in sorted_locations:
-        eta_to_location1 = loc[1]
-        eta_to_location2 = loc[2]
-        
-        total_commute_time = eta_to_location1 + eta_to_location2
-        fairness_metric = abs(eta_to_location1 - eta_to_location2)
-        
-        # Calculate combined score (total_commute_time + fairness_metric)
-        score = total_commute_time + fairness_metric
-        
-        # Update optimal location if this location has a lower combined score
-        if score < min_total_time:
-            min_total_time = score
-            optimal_location = loc
-    
-    return optimal_location
+# FINISH FUNCTION
 
 
 # Task 3 
