@@ -281,6 +281,9 @@ def find_optimal_location(locations):
 # Task 3 
 
 
+#new branch
+
+
 
 
 print(find_optimal_location(get_etas(filter_data(restaurants, rating = 4.0, price = 1.0), (37.808769874598,-122.36074244076914), (37.85920488834141,-122.3903587567014))))
